@@ -21,12 +21,8 @@ then
   # we pipe an empty echo to prevent this
   git stash apply || echo ""
 
-  npm i git-commit-stamper -g
-
   # Version bump package.json, stamp CHANGELOG.md
-  npm run changelog:prepare
   npm run prepare-publish
-  git-commit-stamper parse CHANGELOG.md
 
   # Changelog is now stamped with the version / time info - add to git
   git add CHANGELOG.md
