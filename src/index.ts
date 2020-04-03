@@ -1,3 +1,4 @@
-const blah = 'abcd'
+import { handleStamper } from './handle-stamper'
+import { handleTags } from './handle-tags'
 
-console.log(blah)
+export { handleStamper, handleTags }

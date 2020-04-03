@@ -13,8 +13,7 @@
     "baseUrl": ".",
     "declaration": true,
     "lib": [
-      "ES2018",
-      "dom"
+      "ES2018"
     ],
     "paths": {
       "*": [
