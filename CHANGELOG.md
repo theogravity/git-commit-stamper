@@ -1,3 +1,8 @@
+# UNRELEASED
+
+Added the ability to use a `summary` in place of long
+git body messages.
+
 # 1.0.3 - Fri Apr 03 2020 08:01:36
 
 Added the ability to skip stamping for CI purposes via

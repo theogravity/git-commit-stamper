@@ -13,6 +13,7 @@ This is useful for stamping in the commit subject / body / etc into your changel
 - [Install](#install)
 - [Usage](#usage)
   - [Example](#example)
+  - [Skip stamping](#skip-stamping)
   - [Extended usage](#extended-usage)
 
 <!-- TOC END -->
@@ -37,6 +38,7 @@ in `handlebars`:
   "subject": "initial commit",
   "sanitizedSubject": "initial-commit",
   "body": "this is the body of the commit message",
+  "summary": "This is a summary of the change",
   "authoredOn": "1437988060",
   "committedOn": "1437988060",
   "author": {
@@ -72,6 +74,25 @@ v2 - March 20, 2020
 
 initial commit
 ```
+
+### Including a summary in your changelog
+
+The `body` content of the git commit might be too large for a changelog.
+
+The template tag `summary` will be populated if in your commit body, you use the following syntax:
+
+```text
+This is my subject line
+
+==summary==
+This is a summary of the change
+==end summary==
+
+The rest of the commit body
+```
+
+The `body` tag will have the `==changelog==` markers and content removed (but they will remain in the
+original git commit message).
 
 ### Skip stamping
 
