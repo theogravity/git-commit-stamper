@@ -73,6 +73,11 @@ v2 - March 20, 2020
 initial commit
 ```
 
+### Skip stamping
+
+If you use this tool as part of your CI process, you can skip log stamping by including `[skip-changelog]`
+as part of the git commit subject line.
+
 ### Extended usage
 
 ```bash

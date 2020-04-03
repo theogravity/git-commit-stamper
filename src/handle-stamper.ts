@@ -9,9 +9,14 @@ const asyncReadFile = promisify(readFile)
 const asyncWriteFile = promisify(writeFile)
 
 export async function handleStamper (params: Arguments) {
-  let logData: any = await asyncReadFile(params.logFile, 'utf8')
-
   const commit = await asyncLastCommit()
+
+  if (commit.subject.includes('[skip-changelog]')) {
+    console.log('Skipping changelog stamping\n')
+    return
+  }
+
+  let logData: any = await asyncReadFile(params.logFile, 'utf8')
 
   const template = Handlebars.compile(logData)
 
