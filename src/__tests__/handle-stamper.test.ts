@@ -106,7 +106,9 @@ some content`,
 
       extractSummary(commit)
 
-      expect(commit.summary).toBe('This is a test summary')
+      expect(commit.summary).toBe(`
+This is a test summary
+`)
       expect(commit.body).toBe('some content')
     })
 

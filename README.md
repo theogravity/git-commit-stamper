@@ -13,6 +13,7 @@ This is useful for stamping in the commit subject / body / etc into your changel
 - [Install](#install)
 - [Usage](#usage)
   - [Example](#example)
+  - [Including a summary in your changelog](#including-a-summary-in-your-changelog)
   - [Skip stamping](#skip-stamping)
   - [Extended usage](#extended-usage)
 
@@ -93,6 +94,20 @@ The rest of the commit body
 
 The `body` tag will have the `==changelog==` markers and content removed (but they will remain in the
 original git commit message).
+
+Note: `summary` will have newlines at the top and bottom. This is useful if in your changelog, you do something like:
+
+```text
+## {{subject}}{{summary}}
+```
+
+```text
+## initial commit
+
+This is a summary of the change
+```
+
+If `summary` is not empty, then you do not have to worry about adding newlines.
 
 ### Skip stamping
 

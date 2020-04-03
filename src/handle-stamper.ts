@@ -42,7 +42,6 @@ export function extractSummary (commit) {
   const bodyMatches = CHANGELOG_BODY_REGEX.exec(commit.body)
 
   commit['summary'] = bodyMatches ? bodyMatches[1] : ''
-  commit['summary'] = commit['summary'].trim()
 
   if (commit['summary']) {
     // remove the changelog section from the original body
