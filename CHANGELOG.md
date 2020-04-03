@@ -1,4 +1,4 @@
-# UNRELEASED
+# 1.0.4 - Fri Apr 03 2020 09:09:37
 
 Added the ability to use a `summary` in place of long
 git body messages.
