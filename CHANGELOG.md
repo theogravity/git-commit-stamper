@@ -1,4 +1,4 @@
-# UNRELEASED
+# 1.0.5 - Fri Apr 03 2020 09:18:21
 
 `summary` tag now includes newlines at the beginning and end of the summary.
 
