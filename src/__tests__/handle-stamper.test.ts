@@ -49,7 +49,7 @@ describe('handle-stamper', () => {
 
     const newLog = readFileSync(testFilePath, 'utf8')
 
-    expect(newLog).toBe('Initial commit')
+    expect(newLog).toBe('Initial commit\n\n')
   })
 
   it('should write template data to an outFile param', async () => {
@@ -70,7 +70,7 @@ describe('handle-stamper', () => {
     const newLog = readFileSync(outFilePath, 'utf8')
 
     expect(oldLog).toBe('{{subject}}')
-    expect(newLog).toBe('Initial commit')
+    expect(newLog).toBe('Initial commit\n\n')
   })
 
   it('should simulate the output', async () => {
@@ -89,7 +89,7 @@ describe('handle-stamper', () => {
       simulate: true
     })
 
-    expect(console.log).toBeCalledWith('Initial commit')
+    expect(console.log).toBeCalledWith('Initial commit\n\n')
     console.log = oldLog
   })
 
@@ -106,9 +106,7 @@ some content`,
 
       extractSummary(commit)
 
-      expect(commit.summary).toBe(`
-This is a test summary
-`)
+      expect(commit.summary).toBe('This is a test summary')
       expect(commit.body).toBe('some content')
     })
 

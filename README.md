@@ -56,6 +56,24 @@ in `handlebars`:
 }
 ```
 
+### newlines
+
+The following properties will have two newlines inserted at the end of their content:
+
+- `subject`
+- `sanitizedSubject`
+- `body`
+- `summary`
+- `notes`
+
+This allows for the following:
+
+```text
+{{subject}}{{body}}
+```
+
+If the content already has one newline, another will be added. If it has two, no changes will be made.
+
 ### Example
 
 ```text
@@ -94,8 +112,6 @@ The rest of the commit body
 
 The `body` tag will have the `==changelog==` markers and content removed (but they will remain in the
 original git commit message).
-
-Note: `summary` will have newlines at the top and bottom. This is useful if in your changelog, you do something like:
 
 ```text
 ## {{subject}}{{summary}}
