@@ -12,6 +12,7 @@ This is useful for stamping in the commit subject / body / etc into your changel
 <!-- TOC -->
 - [Install](#install)
 - [Usage](#usage)
+  - [newlines](#newlines)
   - [Example](#example)
   - [Including a summary in your changelog](#including-a-summary-in-your-changelog)
   - [Skip stamping](#skip-stamping)
