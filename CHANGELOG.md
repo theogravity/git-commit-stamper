@@ -1,6 +1,10 @@
+# UNRELEASED
+
+Fix bug where `tags` command was showing wrong commit info.
+
 # 1.0.8 - Sat Apr 11 2020 04:45:31
 
-Fix bug where `git-commit-stamer` installed globally will
+Fix bug where `git-commit-stamper` installed globally will
 get the wrong commit data.
 
 # 1.0.7 - Tue Apr 07 2020 04:42:38
