@@ -1,3 +1,8 @@
+# UNRELEASED
+
+Fix bug where `git-commit-stamer` installed globally will
+get the wrong commit data.
+
 # 1.0.7 - Tue Apr 07 2020 04:42:38
 
 Update readme.

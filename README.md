@@ -22,23 +22,13 @@ This is useful for stamping in the commit subject / body / etc into your changel
 
 ## Install
 
-`npm i git-commit-stamper --save-dev`
-
-In your `package.json`, add the following:
-
-```json
-{
-  "scripts": {
-    "git-commit-stamper": "git-commit-stamper"
-  }
-}
-```
+`npm i git-commit-stamper -g`
 
 ## Usage
 
 The basic command is:
 
-`$ npm run git-commit-stamper parse <logFile> [outFile]`
+`$ git-commit-stamper parse <logFile> [outFile]`
 
 The parser gets the last git commit and produces the following object, which is used for template data
 in `handlebars`:
@@ -144,7 +134,7 @@ as part of the git commit subject line.
 ### Extended usage
 
 ```bash
-$ npm run git-commit-stamper
+$ git-commit-stamper
 
 git-commit-stamper <command>
 
@@ -160,7 +150,7 @@ Options:
 ```
 
 ```bash
-$ npm run git-commit-stamper parse --help
+$ git-commit-stamper parse --help
 
 git-commit-stamper parse <logFile> [outFile]
 
