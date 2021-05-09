@@ -1,6 +1,6 @@
 {
   "name": "git-commit-stamper",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Updates a log file with selected last git commit data",
   "main": "build/index.js",
   "types": "build/index.d.ts",
