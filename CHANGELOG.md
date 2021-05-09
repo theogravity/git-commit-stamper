@@ -1,3 +1,7 @@
+# UNRELEASED
+
+Update dependencies.
+
 # 1.0.9 - Sat Apr 11 2020 04:54:53
 
 Fix bug where `tags` command was showing wrong commit info.
